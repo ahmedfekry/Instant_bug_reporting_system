@@ -1,0 +1,37 @@
+<%= form_with(model: state, local: true) do |form| %>
+  <% if state.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(state.errors.count, "error") %> prohibited this state from being saved:</h2>
+
+      <ul>
+      <% state.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :device %>
+    <%= form.text_field :device, id: :state_device %>
+  </div>
+
+  <div class="field">
+    <%= form.label :os %>
+    <%= form.text_field :os, id: :state_os %>
+  </div>
+
+  <div class="field">
+    <%= form.label :memory %>
+    <%= form.number_field :memory, id: :state_memory %>
+  </div>
+
+  <div class="field">
+    <%= form.label :storage %>
+    <%= form.number_field :storage, id: :state_storage %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

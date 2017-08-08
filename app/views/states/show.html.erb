@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Device:</strong>
+  <%= @state.device %>
+</p>
+
+<p>
+  <strong>Os:</strong>
+  <%= @state.os %>
+</p>
+
+<p>
+  <strong>Memory:</strong>
+  <%= @state.memory %>
+</p>
+
+<p>
+  <strong>Storage:</strong>
+  <%= @state.storage %>
+</p>
+
+<%= link_to 'Edit', edit_state_path(@state) %> |
+<%= link_to 'Back', states_path %>
